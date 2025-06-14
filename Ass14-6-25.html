@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(159, 255, 255);
+        }
+        form{
+            background-color: rgb(42, 140, 253);
+            margin-left: 30%;
+            margin-top: 5%;
+            border-color: blue 5px;
+            width: fit-content;
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(0, 0, 100);
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div{
+            margin-left: 10px;
+        }
+        input{
+            height: 25px;
+            width: fit-content;
+            border-radius: 8px;
+            border-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="validate()"method="post">
+        
+        <center><h1>REGISTRATION FORM</h1></center>
+        <div>
+        Name  :           <input type="text" id="Name" placeholder="Enter Ur Name"><br><br>
+        Age   :           <input type="number" id="Age" placeholder="Enter ur age"><br><br>
+        DOB   :           <input type="date" id="DOB" placeholder="Date of Birth"><br><br>
+        Gender:           <input type="checkbox">Male <input type="checkbox"> Female<br><br>
+        Phone :           <input type="number" id="Phone" placeholder="Your Phone number"><br><br>
+        Email :           <input type="email" id="Email" placeholder="Email"><br><br>
+        Password :        <input type="password" id="Password" placeholder="Create password"><br><br>
+        Confirm Password :<input type="password" id="CPassword" placeholder="Retype password"><br><br>
+        <center><input type="submit" style="background-color: #74ff58; height: 30px;width: 90px;"></center>
+        </div>
+     
+        
+    </form>
+    <script>
+        function validate(){
+            const Name = document.getElementById("Name").value;
+            const Phone = document.getElementById("Phone").value;
+            const Password = document.getElementById("Password").value;
+            const ConfirmP = document.getElementById("CPassword").value;
+            if(Name===""){
+                alert("Fill the field");
+            }
+            if(Phone===""){
+                alert("Fill the field");
+            }
+            if(Password===""){
+                alert("Fill the field");
+            }
+            if(Password!=ConfirmP){
+                alert("Password and confirm password must be same");
+            }
+            else{
+                alert("Registred Successfully");
+            }
+        }
+    </script>
+</body>
+</html>
